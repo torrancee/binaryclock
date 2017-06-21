@@ -5,6 +5,8 @@
 #include <QTimer>
 #include <QDebug>
 #include <QPalette>
+#include <QLineEdit>
+#include <QVector>
 
 namespace Ui {
 class MainWindow;
@@ -25,7 +27,12 @@ private:
     Ui::MainWindow *ui;
     QTimer *timer;
 
-    QPalette green;
+    QVector<QLineEdit*> hoursElements;
+    QVector<QLineEdit*> minutesElements;
+    QVector<QLineEdit*> secondsElements;
+
+    QPalette green, white;
+    void setTime(QString time, QVector<QLineEdit *> &timeElements);
 };
 
 #endif // MAINWINDOW_H
