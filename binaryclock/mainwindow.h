@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <QTimer>
 #include <QDebug>
+#include <QPalette>
 
 namespace Ui {
 class MainWindow;
@@ -23,6 +24,8 @@ public slots:
 private:
     Ui::MainWindow *ui;
     QTimer *timer;
+
+    QPalette green;
 };
 
 #endif // MAINWINDOW_H

@@ -12,6 +12,9 @@ MainWindow::MainWindow(QWidget *parent) :
     timer = new QTimer(this);
     connect(timer, SIGNAL(timeout()), this, SLOT(updateTime()));
     timer->start(1000);
+
+    green.setColor(QPalette::Base, Qt::darkGreen);
+    ui->h0->setPalette(green);
 }
 
 MainWindow::~MainWindow()
